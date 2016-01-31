@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<block>
+  <name>Magnitude Clipper</name>
+  <key>cessb_clipper_cc</key>
+  <category>CESSB</category>
+  <import>import cessb</import>
+  <make>cessb.clipper_cc($clip)</make>
+  <param>
+    <name>Clipping Level</name>
+    <key>clip</key>
+    <value>1.0</value>
+    <type>float</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>
