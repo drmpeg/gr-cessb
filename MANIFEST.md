@@ -1,16 +1,19 @@
-title: The CESSB OOT Module
-brief: Short description of gr-cessb
+title: gr-cessb
+brief: A Controlled Envelope SSB transmitter.
 tags: # Tags are arbitrary, but look at CGRAN what other authors are using
-  - sdr
+  - SSB
+  - Ham Radio
+  - VOLK
 author:
-  - Author Name <authors@email.address>
+  - Ron Economos <w6rz@comcast.net>
 copyright_owner:
-  - Copyright Owner 1
-license:
-#repo: # Put the URL of the repository here, or leave blank for default
-#website: <module_website> # If you have a separate project website, put it here
-#icon: <icon_url> # Put a URL to a square image here that will be used as an icon on CGRAN
+  - Ron Economos <w6rz@comcast.net>
+license: GPL version 3 or later.
+repo: https://github.com/drmpeg/gr-cessb
+#website:
+#icon:
 ---
-A longer, multi-line description of gr-cessb.
-You may use some *basic* Markdown here.
-If left empty, it will try to find a README file instead.
+The project implements a software-defined SSB transmitter that implements Controlled Envelope SSB processing.
+It is based on this article by David L. Hershberger, W9GR.
+
+<http://www.arrl.org/files/file/QEX_Next_Issue/2014/Nov-Dec_2014/Hershberger_QEX_11_14.pdf>
