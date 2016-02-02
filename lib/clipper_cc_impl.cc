@@ -27,8 +27,6 @@
 #include <volk/volk.h>
 #include <gnuradio/math.h>
 
-#define CHUNK_SIZE 16384
-
 namespace gr {
   namespace cessb {
 
@@ -88,6 +86,8 @@ namespace gr {
           volk_32f_x2_multiply_32f(d_phase_cos, d_phase_cos, d_clipped, CHUNK_SIZE);
           volk_32f_x2_multiply_32f(d_phase_sin, d_phase_sin, d_clipped, CHUNK_SIZE);
           volk_32f_x2_interleave_32fc(out, d_phase_cos, d_phase_sin, CHUNK_SIZE);
+          in += CHUNK_SIZE;
+          out += CHUNK_SIZE;
       }
 
       // Tell runtime system how many output items we produced.

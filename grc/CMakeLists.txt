@@ -18,5 +18,6 @@
 # Boston, MA 02110-1301, USA.
 
 install(FILES
-    cessb_clipper_cc.xml DESTINATION share/gnuradio/grc/blocks
+    cessb_clipper_cc.xml
+    cessb_stretcher_cc.xml DESTINATION share/gnuradio/grc/blocks
 )

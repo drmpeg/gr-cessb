@@ -23,7 +23,7 @@ from gnuradio import gr, gr_unittest
 from gnuradio import blocks
 import cessb_swig as cessb
 
-class qa_clipper_cc (gr_unittest.TestCase):
+class qa_stretcher_cc (gr_unittest.TestCase):
 
     def setUp (self):
         self.tb = gr.top_block ()
@@ -38,4 +38,4 @@ class qa_clipper_cc (gr_unittest.TestCase):
 
 
 if __name__ == '__main__':
-    gr_unittest.run(qa_clipper_cc, "qa_clipper_cc.xml")
+    gr_unittest.run(qa_stretcher_cc, "qa_stretcher_cc.xml")

@@ -18,39 +18,39 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_CESSB_CLIPPER_CC_IMPL_H
-#define INCLUDED_CESSB_CLIPPER_CC_IMPL_H
 
-#include <cessb/clipper_cc.h>
+#ifndef INCLUDED_CESSB_STRETCHER_CC_H
+#define INCLUDED_CESSB_STRETCHER_CC_H
 
-#define CHUNK_SIZE 1024
+#include <cessb/api.h>
+#include <gnuradio/block.h>
 
 namespace gr {
   namespace cessb {
 
-    class clipper_cc_impl : public clipper_cc
+    /*!
+     * \brief <+description of block+>
+     * \ingroup cessb
+     *
+     */
+    class CESSB_API stretcher_cc : virtual public gr::block
     {
-     private:
-      float d_magnitude[CHUNK_SIZE];
-      float d_phase[CHUNK_SIZE];
-      float d_clipped[CHUNK_SIZE];
-      float d_cliplevel[CHUNK_SIZE];
-      float d_phase_cos[CHUNK_SIZE];
-      float d_phase_sin[CHUNK_SIZE];
-      float d_clip;
-
      public:
-      clipper_cc_impl(float clip);
-      ~clipper_cc_impl();
+      typedef boost::shared_ptr<stretcher_cc> sptr;
 
-      // Where all the action really happens
-      int work(int noutput_items,
-         gr_vector_const_void_star &input_items,
-         gr_vector_void_star &output_items);
+      /*!
+       * \brief Return a shared_ptr to a new instance of cessb::stretcher_cc.
+       *
+       * To avoid accidental use of raw pointers, cessb::stretcher_cc's
+       * constructor is in a private implementation
+       * class. cessb::stretcher_cc::make is the public interface for
+       * creating new instances.
+       */
+      static sptr make();
     };
 
   } // namespace cessb
 } // namespace gr
 
-#endif /* INCLUDED_CESSB_CLIPPER_CC_IMPL_H */
+#endif /* INCLUDED_CESSB_STRETCHER_CC_H */
 

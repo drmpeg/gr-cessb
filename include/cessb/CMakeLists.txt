@@ -22,5 +22,6 @@
 ########################################################################
 install(FILES
     api.h
-    clipper_cc.h DESTINATION include/cessb
+    clipper_cc.h
+    stretcher_cc.h DESTINATION include/cessb
 )

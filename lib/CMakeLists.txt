@@ -27,6 +27,7 @@ link_directories(${Boost_LIBRARY_DIRS})
 
 list(APPEND cessb_sources
     clipper_cc_impl.cc
+    stretcher_cc_impl.cc
 )
 
 set(cessb_sources "${cessb_sources}" PARENT_SCOPE)

@@ -18,39 +18,40 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_CESSB_CLIPPER_CC_IMPL_H
-#define INCLUDED_CESSB_CLIPPER_CC_IMPL_H
+#ifndef INCLUDED_CESSB_STRETCHER_CC_IMPL_H
+#define INCLUDED_CESSB_STRETCHER_CC_IMPL_H
 
-#include <cessb/clipper_cc.h>
+#include <cessb/stretcher_cc.h>
 
 #define CHUNK_SIZE 1024
 
 namespace gr {
   namespace cessb {
 
-    class clipper_cc_impl : public clipper_cc
+    class stretcher_cc_impl : public stretcher_cc
     {
      private:
-      float d_magnitude[CHUNK_SIZE];
-      float d_phase[CHUNK_SIZE];
-      float d_clipped[CHUNK_SIZE];
-      float d_cliplevel[CHUNK_SIZE];
-      float d_phase_cos[CHUNK_SIZE];
-      float d_phase_sin[CHUNK_SIZE];
-      float d_clip;
+      float d_env[CHUNK_SIZE + 4];
+      float d_envhold[CHUNK_SIZE];
+      float d_ones[CHUNK_SIZE];
+      float d_real[CHUNK_SIZE];
+      float d_imag[CHUNK_SIZE];
 
      public:
-      clipper_cc_impl(float clip);
-      ~clipper_cc_impl();
+      stretcher_cc_impl();
+      ~stretcher_cc_impl();
 
       // Where all the action really happens
-      int work(int noutput_items,
-         gr_vector_const_void_star &input_items,
-         gr_vector_void_star &output_items);
+      void forecast (int noutput_items, gr_vector_int &ninput_items_required);
+
+      int general_work(int noutput_items,
+           gr_vector_int &ninput_items,
+           gr_vector_const_void_star &input_items,
+           gr_vector_void_star &output_items);
     };
 
   } // namespace cessb
 } // namespace gr
 
-#endif /* INCLUDED_CESSB_CLIPPER_CC_IMPL_H */
+#endif /* INCLUDED_CESSB_STRETCHER_CC_IMPL_H */
 
