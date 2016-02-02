@@ -1,6 +1,6 @@
 title: gr-cessb
 brief: A Controlled Envelope SSB transmitter.
-tags: # Tags are arbitrary, but look at CGRAN what other authors are using
+tags:
   - SSB
   - Ham Radio
   - VOLK
