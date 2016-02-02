@@ -29,12 +29,14 @@ article by David L. Hershberger, W9GR.
 
 http://www.arrl.org/files/file/QEX_Next_Issue/2014/Nov-Dec_2014/Hershberger_QEX_11_14.pdf
 
-After installation, a GNU Radio block called "Magnitude Clipper" will
-be available in the "CESSB" category. The block clips the magnitude of
-IQ samples to the specified clipping level. It is the first stage of
-the CESSB algorithm.
+After installation, two GNU Radio blocks called "Magnitude Clipper"
+and "Peak Stretcher" will be available in the "CESSB" category. The
+"Magnitude Clipper" block clips the magnitude of IQ samples to the
+specified clipping level. It is the first stage of the CESSB algorithm.
+The "Peak Stretcher" block does additional clipping. It is the second
+stage of the CESSB algorithm.
 
-There is one block parameter.
+There is one parameter for the Magnitude Clipper block.
 
 1) Clipping Level. The magnitude that IQ samples will be clipped to.
 
