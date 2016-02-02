@@ -320,7 +320,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(280, 459)</value>
+      <value>(336, 419)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -447,6 +447,85 @@
     </param>
   </block>
   <block>
+    <key>band_pass_filter</key>
+    <param>
+      <key>beta</key>
+      <value>6.76</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>decim</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>interp_fir_filter_ccc</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(472, 219)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>gain</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>high_cutoff_freq</key>
+      <value>2800</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>band_pass_filter_0_0_1</value>
+    </param>
+    <param>
+      <key>interp</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>low_cutoff_freq</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>audio_rate</value>
+    </param>
+    <param>
+      <key>width</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>win</key>
+      <value>firdes.WIN_HAMMING</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_float_to_complex</key>
     <param>
       <key>alias</key>
@@ -501,7 +580,7 @@
     </param>
     <param>
       <key>const</key>
-      <value>7.33</value>
+      <value>2.747</value>
     </param>
     <param>
       <key>affinity</key>
@@ -513,7 +592,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(752, 515)</value>
+      <value>(720, 515)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -560,7 +639,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>ssbaudio.wav</value>
+      <value>ssbaudioprocessed.wav</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -599,7 +678,7 @@
     </param>
     <param>
       <key>clip</key>
-      <value>0.1</value>
+      <value>0.353553390593</value>
     </param>
     <param>
       <key>comment</key>
@@ -615,7 +694,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(72, 515)</value>
+      <value>(72, 403)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -624,6 +703,45 @@
     <param>
       <key>id</key>
       <value>cessb_clipper_cc_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>cessb_stretcher_cc</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(280, 281)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>cessb_stretcher_cc_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -662,7 +780,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(520, 491)</value>
+      <value>(696, 299)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1365,7 +1483,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1024, 491)</value>
+      <value>(1024, 467)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1385,7 +1503,7 @@
     </param>
     <param>
       <key>sd_spec0</key>
-      <value>A:B</value>
+      <value></value>
     </param>
     <param>
       <key>time_source0</key>
@@ -1536,7 +1654,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1040, 355)</value>
+      <value>(1040, 299)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1613,13 +1731,19 @@
   </connection>
   <connection>
     <source_block_id>band_pass_filter_0_0</source_block_id>
-    <sink_block_id>rational_resampler_xxx_2</sink_block_id>
+    <sink_block_id>cessb_stretcher_cc_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>band_pass_filter_0_0_0</source_block_id>
     <sink_block_id>cessb_clipper_cc_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>band_pass_filter_0_0_1</source_block_id>
+    <sink_block_id>rational_resampler_xxx_2</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -1656,6 +1780,12 @@
   <connection>
     <source_block_id>cessb_clipper_cc_0</source_block_id>
     <sink_block_id>band_pass_filter_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>cessb_stretcher_cc_0</source_block_id>
+    <sink_block_id>band_pass_filter_0_0_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
