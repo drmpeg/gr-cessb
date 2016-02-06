@@ -41,8 +41,19 @@ There is one parameter for the Magnitude Clipper block.
 1) Clipping Level. The magnitude that IQ samples will be clipped to.
 
 A GNU Radio Companion flow graph (ssb.grc) is provided in the apps
-directory. It transmits a test file with a UHD sink setup for an Ettus
-B2X0 SDR. Be sure to select the correct sink for your device.
+directory. It transmits a test file (ssbaudioprocessed.wav) with a
+UHD sink setup for an Ettus B2X0 SDR. Be sure to select the correct
+sink for your device.
+
+The test file is a male announcer reciting a portion of the Gettysburg
+Address. It has been processed from the file ssbaudio.wav with the sox
+command:
+
+sox ssbaudio.wav -b 16 ssbaudioprocessed.wav compand 0.0,0.01 0.25:-20,-20,0,-20 -0.1 -40 .0005 gain -n -3.0102999566
+
+The sox sound processing utility is available here:
+
+http://sox.sourceforge.net/
 
 Build instructions:
 
