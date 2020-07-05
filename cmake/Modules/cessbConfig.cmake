@@ -22,9 +22,10 @@ FIND_LIBRARY(
           /usr/local/lib64
           /usr/lib
           /usr/lib64
-)
+          )
+
+include("${CMAKE_CURRENT_LIST_DIR}/cessbTarget.cmake")
 
 INCLUDE(FindPackageHandleStandardArgs)
 FIND_PACKAGE_HANDLE_STANDARD_ARGS(CESSB DEFAULT_MSG CESSB_LIBRARIES CESSB_INCLUDE_DIRS)
 MARK_AS_ADVANCED(CESSB_LIBRARIES CESSB_INCLUDE_DIRS)
-
