@@ -69,8 +69,6 @@ include(GrTest)
 #include_directories()
 # List all files that contain Boost.UTF unit tests here
 list(APPEND test_cessb_sources
-qa_stretcher_cc.cc
-qa_clipper_cc.cc
 )
 # Anything we need to link to for the unit tests go here
 list(APPEND GR_TEST_TARGET_DEPS gnuradio-cessb)
