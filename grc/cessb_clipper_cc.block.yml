@@ -2,7 +2,7 @@
 
 id: cessb_clipper_cc
 label: Magnitude Clipper
-category: CESSB
+category: '[CESSB]'
 
 parameters:
 -   id: clip

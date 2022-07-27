@@ -2,7 +2,7 @@
 
 id: cessb_stretcher_cc
 label: Peak Stretcher
-category: CESSB
+category: '[CESSB]'
 
 inputs:
 -   domain: stream
